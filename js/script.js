@@ -37,6 +37,16 @@ function checkBomb (bombListCheck, value){
     return bombListCheck.includes(value);
 }
 
+
+// Funzione che impone una condizione
+// di 'Game Over' al player
+function gameOver (text,losingBox){
+    loseMessage.innerHTML = text;
+    result.innerHTML = 'Hai raggiunto un punteggio di ben ${playerScore} punti!';
+    lostGame.classList.add(losingBox);
+}
+
+
 // Funzione per il cambio dimensione della grid
 // in base alla difficoltà scelta
 
@@ -70,7 +80,7 @@ function boxCreator(container, index){
     createdSquare.innerHTML = index;
     gridContainer.append(createdSquare);
     createdSquare.addEventListener('click', function(){
-        this.classList.toggle('cyan')
+
     })
 }
 
