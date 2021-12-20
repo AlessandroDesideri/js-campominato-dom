@@ -95,6 +95,25 @@ function boxCreator(container, index){
     })
 }
 
+
+// Funzione per generare a caso un numero
+// di bombe da aggiungere alla griglia
+function randomNum(min, max){
+    return Math.floot(Math.random() * ((max + 1) - min)) + min
+}
+
+function randomNumBomb(minNum, maxNum, array, calc){
+    while (array.lenght < 16) {
+        let random = calc(minNum, maxNum);
+
+        if (!array.includes(random)){
+            array.push(random);
+        }
+    }
+}
+
+
+
 // Limito la dimensione della griglia creata
 function maxGridDimension(maxDimension){
     for(let i = 1; i <= maxDimension; i++){
