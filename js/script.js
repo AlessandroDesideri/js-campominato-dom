@@ -15,11 +15,21 @@ const hardGrid = 49;
 // Contenitore dei 'box'
 const gridContainer = document.querySelector('.grid-container');
 
+// 'Repeat' Button,messaggio sconfitta,
+// score giocatore
+const loseMessage = document.querySelector('.lost-message')
+const lostGame = document.querySelector('.lost-container');
+const repeatGame = document.querySelector('.repeat-button');
+const result = document.querySelector('.result');
+
 // Variabili per la scelta del numero di
 // 'box' contenuti nel container
 let easyDifficulty = false;
 let mediumDifficulty = false;
 let hardDifficulty = false;
+let bombCounter = []
+let playerTries = 0;
+let playerScore = 0;
 
 // Funzione per il cambio dimensione della grid
 // in base alla difficoltà scelta
