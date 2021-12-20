@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Non do dimensioni perche verranno assegnate 
+   con la scelta del livello */
+.grid-container{
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square{
+    width: 50px;
+    height: 50px;
+    border: 1px black solid;
+    background-color: #ccc;
+    font-size: 20px;
+}
+
+/* Buttons */
+button{
+    width: 150px;
+    height: 80px;
+    margin: 20px;
+    font-size: 25px;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    
+}
+
+/* Creo le dimensioni dei box in base ad i livelli */
+
+.easy-width{
+    width: 500px;
+}
+
+.medium-width{
+    width: 450px;
+}
+
+.hard-width{
+    width: 350px;
+}
+
+.cyan{
+    background: cyan;
+}
