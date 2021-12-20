@@ -31,6 +31,12 @@ let bombCounter = []
 let playerTries = 0;
 let playerScore = 0;
 
+// Funzione per controllare se il box
+// contiene una bomba
+function checkBomb (bombListCheck, value){
+    return bombListCheck.includes(value);
+}
+
 // Funzione per il cambio dimensione della grid
 // in base alla difficoltà scelta
 
