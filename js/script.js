@@ -28,7 +28,7 @@ let easyDifficulty = false;
 let mediumDifficulty = false;
 let hardDifficulty = false;
 let bombCounter = []
-let playerTries = 0;
+let playerMaxTries = 0;
 let playerScore = 0;
 
 // Funzione per controllare se il box
@@ -73,14 +73,25 @@ function gridDimension (boxContainer){
     }
 }
 
-// Funzione creazione box
+// Funzione creazione box con aggiunta
+// di 'if' in caso il player tocchi o meno una bomba
 function boxCreator(container, index){
     const createdSquare = document.createElement('div');
     createdSquare.className = 'square';
     createdSquare.innerHTML = index;
     gridContainer.append(createdSquare);
     createdSquare.addEventListener('click', function(){
-
+        this.classList.add('cyan');
+        if ( checkBomb(bombCounter, this.value)){
+            this.style.backgroundColor = 'red';
+            gameOver('Peccato, ritenta!');
+        } else{
+            playerScore++;
+        }
+        if (playerScore === playerMaxTries){
+            gameOver ('Ottima partita!');
+    
+        }
     })
 }
 

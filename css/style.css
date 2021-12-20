@@ -35,7 +35,11 @@ button{
     border: 0;
     border-radius: 30px;
     cursor: pointer;
-    
+}
+
+.repeat-button{
+    font-size: 30px;
+    margin: 0 auto;
 }
 
 /* Creo le dimensioni dei box in base ad i livelli */
@@ -56,4 +60,6 @@ button{
     background: cyan;
 }
 
-.
+.red{
+    background: red;
+}
